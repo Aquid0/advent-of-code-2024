@@ -32,6 +32,7 @@ def solve(filename):
         i += 1
     
     v = []
+    
     for u in updates:
         incorrect = False
         seen = []
@@ -47,8 +48,6 @@ def solve(filename):
                 else:
                     new_ordering.append([num, []])
             new_ordering.sort(reverse=True, key=lambda x: len(x[1]))
-            test1 = [len(x[1]) for x in new_ordering]
-            
             v.append([x[0] for x in new_ordering])
 
     ans = 0
