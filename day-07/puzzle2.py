@@ -41,13 +41,13 @@ def generate(tries):
     return all_expressions
 
 
-def solve(filename):
+def solve(filename):    
     with open(filename, 'r') as f:
         tests = f.readlines()
     tests = [l.strip() for l in tests]
     equals = []
     nums = []
-    m = {"1": "+", "0": "*"}
+    m = {"1": "+", "0": "*"}   
 
     for l in tests:
         t = l.split()
