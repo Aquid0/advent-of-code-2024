@@ -48,6 +48,7 @@ def solve(filename):
                 backward_diff_x += b_x_fac
                 backward_diff_y += b_y_fac
 
+
     return len(antinodes)
 
 
