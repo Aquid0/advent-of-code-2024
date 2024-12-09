@@ -40,7 +40,7 @@ def solve(filename):
         if file_id != ".":
             for j in range(i):
                 if groups[j][1] == "." and groups[j][0] >= file_size:
-                    if groups[j][0] == file_size: # i is the number group, j is the dot group
+                    if groups[j][0] == file_size:
                         groups[j] = [file_size, file_id]
                         groups[i] = [file_size, "."] 
                     elif groups[j][0] > file_size:
