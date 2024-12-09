@@ -33,16 +33,19 @@ def solve(filename):
 
 
     for i in range(len(groups)-1, -1, -1):
-        if groups[i][1] != ".":
+        
+        file_size = groups[i][0]
+        file_id = groups[i][1]
+        
+        if file_id != ".":
             for j in range(i):
-                if groups[j][1] == "." and groups[j][0] >= groups[i][0]:
-                    if groups[j][0] == groups[i][0]: # i is the number group, j is the dot group
-                        groups[j] = [groups[i][0], groups[i][1]]
-                        groups[i] = [groups[i][0], "."] 
-                    elif groups[j][0] > groups[i][0]:
-                        temp_c = groups[i][0]
-                        groups[j:j+1] = [[groups[i][0], groups[i][1]], [groups[j][0]-groups[i][0], "."]]
-                        groups[i+1] = [temp_c, "."]
+                if groups[j][1] == "." and groups[j][0] >= file_size:
+                    if groups[j][0] == file_size: # i is the number group, j is the dot group
+                        groups[j] = [file_size, file_id]
+                        groups[i] = [file_size, "."] 
+                    elif groups[j][0] > file_size:
+                        groups[j:j+1] = [[file_size, file_id], [groups[j][0]-groups[i][0], "."]]
+                        groups[i+1] = [file_size, "."]
                     break        
     
     
