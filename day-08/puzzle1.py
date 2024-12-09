@@ -6,8 +6,6 @@ test_file_path = os.path.join(script_dir, 'test.txt')
 input_file_path = os.path.join(script_dir, 'input.txt')
 
 
-
-
 def solve(filename):
     with open(filename, 'r') as f:
         tests = f.readlines()
@@ -15,7 +13,7 @@ def solve(filename):
     m = len(grid)
     n = len(grid[0])
     frequencies = {}
-    antinodes = set()
+    antinodes = set() # Comment
 
     for r in range(m):
         for c in range(n):

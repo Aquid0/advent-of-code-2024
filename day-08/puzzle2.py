@@ -6,6 +6,7 @@ test_file_path = os.path.join(script_dir, 'test.txt')
 input_file_path = os.path.join(script_dir, 'input.txt')
 
 
+
 def solve(filename):
     with open(filename, 'r') as f:
         tests = f.readlines()
