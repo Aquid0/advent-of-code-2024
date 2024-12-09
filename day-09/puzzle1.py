@@ -66,4 +66,4 @@ def solve(filename):
 
 
 print(f'Test Solution: {solve(test_file_path)}')
-# print(f'Question Solution: {solve(input_file_path)}')
+print(f'Question Solution: {solve(input_file_path)}')
